@@ -106,20 +106,20 @@ function Info() {
         {/* <div class={styles.marqueecontainer}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div> 
                 <div class={styles.marqueecontainer1}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div>   */}
 
-        {
-          <Image
-            src="/hi.jpg"
+        <div className={styles.infoimg}>
+          <img
+            src="/regph.jpg"
             alt="Description of the image"
-            width={250}
-            height={250}
+            width={500}
+            height={500}
           />
-        }
+        </div>
       </div>
       <div>
         <h1>Prompt Engineering</h1>
         <h3>Learn the Language of AI</h3>
         <h4> About the Workshop</h4>
-        <p>
+        <p className>
           {" "}
           These attributes allow you to customize the behavior and validation of
           input boxes in HTML forms, enhancing user experience and data

@@ -17,7 +17,14 @@
 .regformdiv {
   background-color: #ffffff;
   width: 48%; /* Adjusts width for equal spacing (optional) */
-  box-sizing: border-box; /* Includes padding/border in the element's total width/height */
+  box-sizing: border-box;
+}
+.infodiv {
+  border-right: 2px solid black;
+}
+
+.infoimg {
+  padding: 0px 8vw;
 }
 .regbutton {
   clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
