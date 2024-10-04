@@ -56,7 +56,8 @@ function Regform() {
 
   return (
     <div className={styles.regformdiv}>
-      <h1>Registration Form</h1>
+      <h1 style={{ textAlign: "center", margin: "30px" }}>Registration Form</h1>
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <NameAndBox
           label="Name"
@@ -90,10 +91,12 @@ function Regform() {
           value={formData.number}
           handleChange={handleChange}
         />
-        <div className={styles.scantopay}>Scan To Pay</div>
-        <button className={styles.regbutton} type="submit">
-          Register
-        </button>
+        <div className={styles.scanandreg}>
+          <div className={styles.scantopay}>Scan To Pay</div>
+          <button className={styles.regbutton} type="submit">
+            Register
+          </button>
+        </div>
       </form>
     </div>
   );
@@ -116,7 +119,8 @@ function Info() {
           </div>
         </div>
       </div>
-      <div>
+
+      <div className={styles.infodiv2}>
         <h1>Prompt Engineering</h1>
         <h3>Learn the Language of AI</h3>
         <h4> About the Workshop</h4>
@@ -129,8 +133,17 @@ function Info() {
         </p>
       </div>
       <div className={styles.infocon}>
-        <div className={styles.cont1}>card1</div>
-        <div className={styles.contmain}>card2</div>
+        <div className={styles.cont1}>
+          <div>Contact:</div>
+          <div>9988765432</div>
+        </div>
+        <div className={styles.contmain}>
+  <div className={styles.date}>Date: 4th June 2024</div>
+  <div className={styles.timeSection}>
+    <div className={styles.time}>4:00pm - 6:00pm</div>
+    <div className={styles.label}>date</div>
+  </div>
+</div>
         <div className={styles.cont2}>card3</div>
       </div>
     </div>
@@ -139,10 +152,13 @@ function Info() {
 
 function Fullpage() {
   return (
-    <div className={styles.page}>
-      <Info />
-      <Regform />
-    </div>
+    <>
+
+      <div className={styles.page}>
+        <Info />
+        <Regform />
+      </div>
+    </>
   );
 }
 
