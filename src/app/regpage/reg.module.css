@@ -134,6 +134,10 @@
   transform: translateY(30px);
 }
 
+.cont2 {
+  transform: translateY(-30px);
+}
+
 .contmain {
   background-color: #001f54; /* Dark blue */
   color: white;
@@ -147,4 +151,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   margin: 10px;
+}
+
+.infocon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+  padding: 20px 0px;
 }

@@ -127,10 +127,10 @@ function Info() {
           requirements to create efficient forms.
         </p>
       </div>
-      <div>
-        <div className={styles.cont}>card1</div>
+      <div className={styles.infocon}>
+        <div className={styles.cont1}>card1</div>
         <div className={styles.contmain}>card2</div>
-        <div className={styles.cont}>card3</div>
+        <div className={styles.cont2}>card3</div>
       </div>
     </div>
   );
