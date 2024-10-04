@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./reg.module.css"; // Import the CSS module
+import styles from "./reg.module.css";
 import Image from "next/image";
-import { color } from "framer-motion";
 
 const NameAndBox = ({
   label,
@@ -15,7 +14,7 @@ const NameAndBox = ({
   return (
     <div className={styles.inputbox_header}>
       <label htmlFor={name}>
-        <div styles={{width:200,height:100,}}> {label}</div>
+        <div styles={{ width: 200, height: 100 }}> {label}</div>
       </label>
       <input
         type={type}
@@ -103,17 +102,18 @@ function Regform() {
 function Info() {
   return (
     <div className={styles.infodiv}>
-      <div>
-        {/* <div class={styles.marqueecontainer}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div> 
-                <div class={styles.marqueecontainer1}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div>   */}
-
+      <div className={styles.infoimgmar}>
         <div className={styles.infoimg}>
-          <img
-            src="/regph.jpg"
-            alt="Description of the image"
-            width={500}
-            height={500}
-          />
+          <img src="/regph.jpg" alt="Description of the image" />
+          <div class={styles.marqueecontainer}>
+            <div class={styles.marquee}></div>
+          </div>
+          <div class={styles.marqueecontainer1}>
+            <div class={styles.marquee}>
+              HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
+              LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK{" "}
+            </div>
+          </div>
         </div>
       </div>
       <div>
