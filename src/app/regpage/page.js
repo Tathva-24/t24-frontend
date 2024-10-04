@@ -12,16 +12,13 @@ const NameAndBox = ({
   handleChange,
 }) => {
   return (
-    <div>
-      <label
-        htmlFor={name} // Dynamically bind name to the label
-        className="block text-sm font-medium text-gray-900 dark:text-black"
-      >
-        {label}
+    <div className={styles.inputbox_header}>
+      <label htmlFor={name}>
+        <p> {label}</p>
       </label>
       <input
         type={type}
-        id={name} // Dynamically set the id from the name prop
+        id={name}
         name={name} // Dynamically bind the name attribute
         placeholder={placeholder} // Dynamically set placeholder
         value={value} // Controlled input with passed value
@@ -58,10 +55,8 @@ function Regform() {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-black mb-5 text-center">
-        Registration Form
-      </h2>
+    <div className={styles.regformdiv}>
+      <h1>Registration Form</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <NameAndBox
           label="Name:"
@@ -106,8 +101,8 @@ function Regform() {
 
 function Info() {
   return (
-    <div className="bg-blue-500 p-4">
-      <div className="bg-green-500 p-4 text-center rounded relative">
+    <div className={styles.infodiv}>
+      <div>
         {/* <div class={styles.marqueecontainer}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div> 
                 <div class={styles.marqueecontainer1}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div>   */}
 
@@ -120,10 +115,10 @@ function Info() {
           />
         }
       </div>
-      <div className="info1">
-        <h1 className="text-3xl font-bold">Prompt Engineering</h1>
-        <h6 className="text-1xl mb-2 font-medium">Learn the Language of AI</h6>
-        <h4 className="text-2xl font-bold"> About the Workshop</h4>
+      <div>
+        <h1>Prompt Engineering</h1>
+        <h3>Learn the Language of AI</h3>
+        <h4> About the Workshop</h4>
         <p>
           {" "}
           These attributes allow you to customize the behavior and validation of
@@ -132,10 +127,10 @@ function Info() {
           requirements to create efficient forms.
         </p>
       </div>
-      <div className={styles.infocon}>
-        <div className={styles.cont1}>card1</div>
+      <div>
+        <div className={styles.cont}>card1</div>
         <div className={styles.contmain}>card2</div>
-        <div className={styles.cont2}>card3</div>
+        <div className={styles.cont}>card3</div>
       </div>
     </div>
   );
@@ -145,12 +140,9 @@ function Fullpage() {
   return (
     <div className={styles.page}>
       <Info />
-
       <Regform />
     </div>
   );
 }
 
 export default Fullpage;
-
-/* Rectangle 717 */
