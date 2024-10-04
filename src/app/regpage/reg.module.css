@@ -11,17 +11,15 @@
   margin-bottom: 5px; /* Example style for labels */
 }
 
-
 .regbutton {
-  
   clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
-  background-color: #4CAF50; /* Green background */
-  color: white;              /* White text color */
-  padding: 10px 20px;        /* Padding for top/bottom and left/right */
-  border: none;     
-  width: 150px;         /* Remove border */      /* Rounded corners */
-  cursor: pointer;           /* Change cursor to pointer on hover */
-  font-size: 16px;           /* Font size */
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for top/bottom and left/right */
+  border: none;
+  width: 150px; /* Remove border */ /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Font size */
   transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
@@ -37,10 +35,10 @@
   border-radius: 30px;
   margin: 50px;
   padding: 20px;
-  font-family:Arial, Helvetica, sans-serif}
-  
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.inputbox{
+.inputbox {
   border-radius: 7px;
   min-height: 40px;
   min-width: 300px;
@@ -51,28 +49,27 @@
 
 .inputbox::placeholder {
   font-size: 12px; /* Adjust this value to reduce the size */
-  color: rgb(128, 119, 119);     /* Optional: Change placeholder text color */
+  color: rgb(128, 119, 119); /* Optional: Change placeholder text color */
 }
-
 
 .marqueecontainer {
   position: absolute;
   top: 50%;
   left: -10%;
-  transform: translate(-50%, -50%); 
-  width: 600px; 
-  height: 50px; 
-  background-color: #f6ff00; 
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 50px;
+  background-color: #f6ff00;
   overflow: hidden;
-  transform: rotate(-45deg); 
+  transform: rotate(-45deg);
   /* Center the rectangle on the page */
 }
 
 .marqueecontainer1 {
   position: absolute;
   top: 50%;
-  left:-20%;
-  transform: translate(-50%, -50%); 
+  left: -20%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   width: 600px; /* Width of the rectangle */
   height: 50px; /* Height of the rectangle */
@@ -81,7 +78,6 @@
   transform: rotate(45deg); /* Rotate the rectangle */
   /* Center the rectangle on the page */
 }
-
 
 .marquee {
   position: absolute;
@@ -96,27 +92,27 @@
 }
 @keyframes marquee {
   0% {
-      left: 100%; /* Start from the right */
+    left: 100%; /* Start from the right */
   }
   100% {
-      left: -100%; /* End at the left */
+    left: -100%; /* End at the left */
   }
 }
 
 .overlayimage {
   position: absolute; /* Position the image absolutely */
   top: 50%; /* Adjust as needed */
-  left:50% ; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
 
   /* className="absolute inset-0 m-auto"  */
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   max-width: 100%; /* Make the image responsive */
   margin: auto;
   height: auto;
- 
 }
 
-.cont {
+.cont1,
+.cont2 {
   background-color: #001f54; /* Dark blue */
   color: white;
   position: relative;
@@ -129,8 +125,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   margin: 10px;
+  box-shadow: rgba(0, 128, 255, 0.2) 0px 8px 24px;
 }
 
+.cont1 {
+  transform: translateY(30px);
+}
+
+.cont2 {
+  transform: translateY(-30px);
+}
 
 .contmain {
   background-color: #001f54; /* Dark blue */
@@ -145,4 +149,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   margin: 10px;
+}
+
+.infocon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+  padding: 20px 0px;
 }
