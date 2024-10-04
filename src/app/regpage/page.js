@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 const NameAndBox = ({ label, type, placeholder, name, value, handleChange }) => {
     return (
-        <div>
+        <div className={styles.inputbox_header}>
             <label
-                htmlFor={name}>
-                {label}
+                htmlFor={name}><p>  {label}</p>
+              
             </label>
             <input
                 type={type}
@@ -48,10 +48,10 @@ function Regform() {
 
 
     return (
-        <div >
-            <h2>Registration Form</h2>
+        <div className={styles.regformdiv}>
+            <h1>Registration Form</h1>
             <form 
-            // className={styles.form} 
+            className={styles.form} 
             onSubmit={handleSubmit}>
 
                 <NameAndBox label="Name:" type="text" placeholder="Your Name" name="name" value={formData.name} handleChange={handleChange} />
@@ -68,14 +68,14 @@ function Regform() {
 
 function Info() {
     return (
-        <div >
+        <div className={styles.infodiv}  >
             <div>
                 {/* <div class={styles.marqueecontainer}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div> 
                 <div class={styles.marqueecontainer1}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div>   */}
 
                 {<Image src="/hi.jpg" alt="Description of the image" width={250} height={250} />}
             </div>
-            <div className="info1">
+            <div>
                 <h1 >Prompt Engineering</h1>
                 <h3>Learn the Language of AI</h3>
                 <h4 > About the Workshop</h4>
@@ -97,13 +97,8 @@ function Info() {
 function Fullpage() {
     return (
         <div className={styles.page}>
-            <Info 
-            //className={styles.infodiv} 
-            />
-            {/* <div className="border-l-2 border-black-300 h-20 mx-4" /> */}
-            <Regform 
-            // className={styles.regformdiv}
-            />
+            <Info/>
+            <Regform/>
         </div>
 
     );
