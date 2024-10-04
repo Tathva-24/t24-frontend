@@ -4,7 +4,6 @@
   border-radius: 30px;
   min-height: 100vh;
   justify-content: space-evenly;
-  font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -17,10 +16,14 @@
 
 .infodiv,
 .regformdiv {
+  flex:1;
   background-color: #ffffff;
   box-sizing: border-box;
 }
 
+.regformdiv {
+  padding: 30px;
+}
 .infodiv {
   border-right: 2px solid black;
   display: flex;
@@ -44,27 +47,32 @@
 }
 
 .regbutton {
-  margin-top: 9vh;
-  margin-left: 35vw;
-  margin-bottom: 1vh;
+  margin-top: 30px;
+  margin-left: 30px;
   clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
+  background-color: #002552; /* Green background */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for top/bottom and left/right */
   border: none;
-  width: 150px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  width: 150px; /* Remove border / / Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+.regbutton:hover {
+  background-color: #001e88; /* Darker green on hover */
+}
+.scanandreg{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.regbutton:hover {
-  background-color: #45a049;
-}
 
 .inputbox_header {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight:500;
 }
 
 .inputbox {
@@ -84,17 +92,19 @@
   font-weight: 700;
 }
 
+
 .inputbox::placeholder {
   padding-left: 15px;
-  font-size: 17px;
-  color: rgb(205, 193, 193);
+  font-size: 19px; /* Adjust this value to reduce the size */
+  color: rgb(205, 193, 193); /* Optional: Change placeholder text color */
 }
+
 
 .marqueecontainer {
   position: absolute;
-  top: 37%;
-  left: -7%;
-  transform: rotate(-26deg);
+  top: 30%;
+  left: -10%;
+  transform: rotate(-29deg);
   width: 75vw;
   height: 50px;
   background-color: #ffd335;
@@ -107,9 +117,9 @@
 
 .marqueecontainer1 {
   position: absolute;
-  bottom: 48%;
-  right: -7%;
-  transform: rotate(26deg);
+  bottom: 50%;
+  right: -8%;
+  transform: rotate(29deg);
   width: 65vw;
   height: 50px;
   background-color: #ffd335;
