@@ -72,8 +72,8 @@ function Info() {
             <div className="bg-green-500 p-4 text-center rounded relative" >
                 {/* <div class={styles.marqueecontainer}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div> 
                 <div class={styles.marqueecontainer1}><div class={styles.marquee} >This is a diagonal marquee effect!</div></div>   */}
-                
-                { <Image src="/hi.jpg" alt="Description of the image" width={250} height={250}   /> }
+
+                {<Image src="/hi.jpg" alt="Description of the image" width={250} height={250} />}
             </div>
             <div className="info1">
                 <h1 className="text-3xl font-bold">Prompt Engineering</h1>
@@ -85,9 +85,9 @@ function Info() {
                     these attributes based on your requirements to create efficient forms.
                 </p>
             </div>
-            <div className="flex">
+            <div className="flex flex-row ">
                 <div className={styles.cont} >card1</div>
-                <div className={styles.cont}>card2</div>
+                <div className={styles.contmain}>card2</div>
                 <div className={styles.cont}>card3</div>
             </div>
         </div>
@@ -106,3 +106,7 @@ function Fullpage() {
 }
 
 export default Fullpage;
+
+
+/* Rectangle 717 */
+

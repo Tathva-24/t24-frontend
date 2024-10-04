@@ -13,11 +13,13 @@
 
 
 .regbutton {
+  
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
   background-color: #4CAF50; /* Green background */
   color: white;              /* White text color */
   padding: 10px 20px;        /* Padding for top/bottom and left/right */
-  border: none;              /* Remove border */
-  border-radius: 10px;       /* Rounded corners */
+  border: none;     
+  width: 150px;         /* Remove border */      /* Rounded corners */
   cursor: pointer;           /* Change cursor to pointer on hover */
   font-size: 16px;           /* Font size */
   transition: background-color 0.3s; /* Smooth transition for background color */
@@ -126,4 +128,21 @@
   clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  margin: 10px;
+}
+
+
+.contmain {
+  background-color: #001f54; /* Dark blue */
+  color: white;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  margin: 10px;
 }
