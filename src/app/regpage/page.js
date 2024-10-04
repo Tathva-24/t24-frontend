@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./reg.module.css"; // Import the CSS module
 import Image from "next/image";
+import { color } from "framer-motion";
 
 const NameAndBox = ({
   label,
@@ -14,7 +15,7 @@ const NameAndBox = ({
   return (
     <div className={styles.inputbox_header}>
       <label htmlFor={name}>
-        <p> {label}</p>
+        <div styles={{width:200,height:100,}}> {label}</div>
       </label>
       <input
         type={type}
@@ -59,7 +60,7 @@ function Regform() {
       <h1>Registration Form</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <NameAndBox
-          label="Name:"
+          label="Name"
           type="text"
           placeholder="Your Name"
           name="name"
@@ -75,7 +76,7 @@ function Regform() {
           handleChange={handleChange}
         />
         <NameAndBox
-          label="Email:"
+          label="Email"
           type="email"
           placeholder="example@gmail.com"
           name="email"
@@ -83,14 +84,14 @@ function Regform() {
           handleChange={handleChange}
         />
         <NameAndBox
-          label="Contact Number:"
+          label="Contact Number"
           type="text"
           placeholder="+91"
           name="number"
           value={formData.number}
           handleChange={handleChange}
         />
-        <div className="text-1xl font-bold">Scan To Pay</div>
+        <div className={styles.scantopay}>Scan To Pay</div>
         <button className={styles.regbutton} type="submit">
           Register
         </button>
