@@ -2,9 +2,7 @@
   display: flex;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
-  min-height: 100vh;
   justify-content: space-evenly;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
