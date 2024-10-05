@@ -1,0 +1,68 @@
+/* app/components/Card.module.css */
+
+/* New card container that holds the gradient border */
+.cardContainer {
+    background: linear-gradient(#121b54,#cfd0de, #f7f7f9); /* Gradient from top (#121b54) to bottom (#f7f7f9) */
+    border-radius: 20px; /* Border radius for the container */
+    padding: 2px;        /* This creates space for the "border" effect */
+  }
+  
+  /* The actual card sits inside the container */
+  .card {
+    background-color: white; /* Make sure the card itself has a white background */
+    border-radius: 16px;      /* Inner border radius (slightly smaller than container) */
+    padding: 16px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: px;
+    position: relative;       /* To allow absolute positioning of the button */
+  }
+  
+  .image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Left align text */
+  .h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 16px;
+
+    text-align: left; /* Align heading to the left */
+  }
+  
+  .p {
+    margin: 2px 0 20px 0;
+    text-align: left; /* Align paragraph (description) to the left */
+    font-size: small;
+    color: #858585;
+  }
+  
+  .price {
+    font-weight: bold;
+    text-align: left; /* Align price to the left */
+  }
+  
+  .date {
+    text-align: left; /* Align date to the left */
+    color: #444444;
+    font-size: small;
+    font-weight: 500;
+  }
+  
+  /* Button positioning and styling */
+  .buyButton {
+    background-color: #eff0fc;
+    color: #00004f;
+    border: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 20px; /* Make the button's border more rounded */
+    position: absolute;
+    bottom: 0px; /* Position the button 16px from the bottom of the card */
+    right: 0px;  /* Position the button 16px from the right of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
