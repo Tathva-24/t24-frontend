@@ -56,7 +56,7 @@ function Regform() {
 
   return (
     <div className={styles.regformdiv}>
-      <h1 style={{ textAlign: "center", margin: "30px" }}>Registration Form</h1>
+      <p className={styles.reghead}>Registration Form</p>
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <NameAndBox
@@ -91,6 +91,7 @@ function Regform() {
           value={formData.number}
           handleChange={handleChange}
         />
+        
         <div className={styles.scanandreg}>
           <div className={styles.scantopay}>Scan To Pay</div>
           <button className={styles.regbutton} type="submit">
@@ -121,30 +122,44 @@ function Info() {
       </div>
 
       <div className={styles.infodiv2}>
-        <h1>Prompt Engineering</h1>
-        <h3>Learn the Language of AI</h3>
-        <h4> About the Workshop</h4>
-        <p className>
-          {" "}
-          These attributes allow you to customize the behavior and validation of
-          input boxes in HTML forms, enhancing user experience and data
-          collection. You can combine these attributes based on your
-          requirements to create efficient forms.
-        </p>
+        <div className={styles.infodivchead}>
+        <p>Prompt Engineering</p>
+        </div>
+        <div className={styles.infodivc0}>
+          <p>Learn the Language of AI</p>
+        </div>
+
+        <div className={styles.infodivc1}>
+          <p> About the Workshop</p>
+        </div>
+        <div className={styles.infodivc2}>
+          <p>
+            These attributes allow you to customize the behavior and validation
+            of input boxes in HTML forms, enhancing user experience and data
+            collection. You can combine these attributes based on your
+            requirements to create efficient forms.
+          </p>
+        </div>
       </div>
       <div className={styles.infocon}>
         <div className={styles.cont1}>
-          <div>Contact:</div>
-          <div>9988765432</div>
+          <div >
+             <img className={styles.cont1logo}src="/Vector1.svg" alt="Description of the image" /> 
+            </div>
+          <div className={styles.cont1info}>
+            <div>Contact:</div>
+            <div>9988765432</div>
+          </div>
         </div>
         <div className={styles.contmain}>
-  <div className={styles.date}>Date: 4th June 2024</div>
-  <div className={styles.timeSection}>
-    <div className={styles.time}>4:00pm - 6:00pm</div>
-    <div className={styles.label}>date</div>
-  </div>
-</div>
-        <div className={styles.cont2}>card3</div>
+          <div className={styles.date}>Date: 4th June 2024</div>
+          <div className={styles.timeSection}>
+            <div className={styles.time}>4:00pm - 6:00pm</div>
+            
+            <div className={styles.label}><div ><img src="/Vector.svg" className={styles.labellogo} alt="Description of the image" /></div> NIT Calicut<div></div></div>
+          </div>
+        </div>
+        <div className={styles.cont2}>Price:599/-</div>
       </div>
     </div>
   );
@@ -153,7 +168,6 @@ function Info() {
 function Fullpage() {
   return (
     <>
-
       <div className={styles.page}>
         <Info />
         <Regform />
