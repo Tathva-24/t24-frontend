@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./reg.module.css";
 import Image from "next/image";
+import gsap from "gsap";
 
 const NameAndBox = ({
   label,
@@ -91,7 +92,7 @@ function Regform() {
           value={formData.number}
           handleChange={handleChange}
         />
-        
+
         <div className={styles.scanandreg}>
           <div className={styles.scantopay}>Scan To Pay</div>
           <button className={styles.regbutton} type="submit">
@@ -103,27 +104,72 @@ function Regform() {
   );
 }
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import { Draggable } from "gsap/Draggable";
+
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, CSSRulePlugin, Draggable);
+
 function Info() {
+  const marqueeRef = useRef(null);
+  const marqueeRef1 = useRef(null);
+
+  useEffect(() => {
+    const marquee = marqueeRef1.current;
+
+    // Duplicate the content for smooth looping
+    const duplicateMarqueeContent = marquee.innerHTML;
+    marquee.innerHTML += duplicateMarqueeContent;
+
+    const totalWidth = marquee.scrollWidth / 2;
+    gsap.to(marquee, {
+      x: -totalWidth, // Move it to the left by the width of the content
+      duration: 50, // Adjust the speed
+      ease: "none", // Linear motion, no easing
+      repeat: -1, // Infinite loop
+    });
+  }, []);
+
+  useEffect(() => {
+    const marquee = marqueeRef.current;
+
+    // Duplicate the content for smooth looping
+    const duplicateMarqueeContent = marquee.innerHTML;
+    marquee.innerHTML += duplicateMarqueeContent;
+
+    const totalWidth = marquee.scrollWidth / 2;
+    gsap.to(marquee, {
+      x: -totalWidth, // Move it to the left by the width of the content
+      duration: 50, // Adjust the speed
+      ease: "none", // Linear motion, no easing
+      repeat: -1, // Infinite loop
+    });
+  }, []);
+
   return (
     <div className={styles.infodiv}>
-      <div className={styles.infoimgmar}>
-        <div className={styles.infoimg}>
-          <img src="/regph.jpg" alt="Description of the image" />
-          <div class={styles.marqueecontainer}>
-            <div class={styles.marquee}></div>
+      <div className={styles.infoimg}>
+        <img src="/regph.jpg" alt="Description of the image" />
+        <div className={styles.marqueecontainer}>
+          <div ref={marqueeRef} className={styles.marquee}>
+            {/* Marquee content, duplicated inside the useEffect */}
+            HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
+            LOOK{" "}
           </div>
-          <div class={styles.marqueecontainer1}>
-            <div class={styles.marquee}>
-              HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
-              LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK{" "}
-            </div>
+        </div>
+        <div className={styles.marqueecontainer1}>
+          <div ref={marqueeRef1} className={styles.marquee}>
+            {/* Marquee content, duplicated inside the useEffect */}
+            HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
+            LOOK{" "}
           </div>
         </div>
       </div>
 
       <div className={styles.infodiv2}>
         <div className={styles.infodivchead}>
-        <p>Prompt Engineering</p>
+          <p>Prompt Engineering</p>
         </div>
         <div className={styles.infodivc0}>
           <p>Learn the Language of AI</p>
@@ -143,9 +189,13 @@ function Info() {
       </div>
       <div className={styles.infocon}>
         <div className={styles.cont1}>
-          <div >
-             <img className={styles.cont1logo}src="/Vector1.svg" alt="Description of the image" /> 
-            </div>
+          <div>
+            <img
+              className={styles.cont1logo}
+              src="/Vector1.svg"
+              alt="Description of the image"
+            />
+          </div>
           <div className={styles.cont1info}>
             <div>Contact:</div>
             <div>9988765432</div>
@@ -155,8 +205,17 @@ function Info() {
           <div className={styles.date}>Date: 4th June 2024</div>
           <div className={styles.timeSection}>
             <div className={styles.time}>4:00pm - 6:00pm</div>
-            
-            <div className={styles.label}><div ><img src="/Vector.svg" className={styles.labellogo} alt="Description of the image" /></div> NIT Calicut<div></div></div>
+
+            <div className={styles.label}>
+              <div>
+                <img
+                  src="/Vector.svg"
+                  className={styles.labellogo}
+                  alt="Description of the image"
+                />
+              </div>{" "}
+              NIT Calicut<div></div>
+            </div>
           </div>
         </div>
         <div className={styles.cont2}>Price:599/-</div>
