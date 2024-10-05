@@ -39,6 +39,7 @@
   padding: 30px;
 }
 .infodiv {
+  overflow: hidden;
   display: flex;
   width: 57%;
   flex-direction: column;
@@ -84,7 +85,6 @@
 }
 
 .infoimg {
-  overflow: hidden;
   position: relative;
   padding: 0px 8vw;
   display: flex;
