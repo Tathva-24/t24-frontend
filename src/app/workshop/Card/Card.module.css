@@ -1,6 +1,8 @@
 /* app/components/Card.module.css */
 
 /* New card container that holds the gradient border */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 .cardContainer {
     background: linear-gradient(#121b54,#cfd0de, #f7f7f9); /* Gradient from top (#121b54) to bottom (#f7f7f9) */
     border-radius: 20px; /* Border radius for the container */
@@ -16,6 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: px;
     position: relative;       /* To allow absolute positioning of the button */
+    font-family: 'Poppins', sans-serif;
   }
   
   .image {
@@ -37,6 +40,7 @@
     text-align: left; /* Align paragraph (description) to the left */
     font-size: small;
     color: #858585;
+    line-height: 20px;
   }
   
   .price {
@@ -47,8 +51,9 @@
   .date {
     text-align: left; /* Align date to the left */
     color: #444444;
-    font-size: small;
+    font-size: 15px;
     font-weight: 500;
+    margin: 0;
   }
   
   /* Button positioning and styling */
@@ -64,5 +69,6 @@
     right: 0px;  /* Position the button 16px from the right of the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    font-weight: 600;
   }
   
