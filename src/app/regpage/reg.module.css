@@ -5,8 +5,23 @@
   justify-content: space-evenly;
   font-weight: 400;
   font-style: normal;
+  padding: 0px;
+  margin: 5vw 20vw;
+  height: fit-content;
+  position: relative;
 }
-
+.page::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background: linear-gradient(180deg, #001f54, #ffffff);
+  border-radius: 30px;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.4);
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -14,18 +29,22 @@
 
 .infodiv,
 .regformdiv {
-  flex: 1;
+  border-radius: 30px;
   background-color: #ffffff;
   box-sizing: border-box;
 }
 
 .regformdiv {
+  width: 43%;
   padding: 30px;
 }
 .infodiv {
   border-right: 2px solid black;
   display: flex;
+  width: 57%;
   flex-direction: column;
+  box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .reghead {
@@ -77,12 +96,13 @@
   padding: 0px 8vw;
   display: flex;
   justify-content: center;
+  border-radius: 30px;
 }
 
 .infoimg img {
   width: 27vw;
   height: auto;
-  padding: 15px;
+  margin: 5vh;
   z-index: 10; /* Ensure image is on top */
   position: relative; /* Must be positioned to obey z-index */
 }
@@ -119,7 +139,7 @@
   border-radius: 12px;
   padding-left: 10px;
   height: 7vh;
-  width: 40vw;
+  width: 20vw;
   margin-top: 5px;
   margin-bottom: 7px;
   border-color: rgba(35, 136, 255, 1);
@@ -140,9 +160,9 @@
 
 .marqueecontainer {
   position: absolute;
-  top: 30%;
-  left: -10%;
-  transform: rotate(-29deg);
+  top: -0%;
+  left: -15%;
+  transform: rotate(-28deg);
   width: 75vw;
   height: 50px;
   background-color: #ffd335;
@@ -155,9 +175,9 @@
 
 .marqueecontainer1 {
   position: absolute;
-  bottom: 50%;
-  right: -8%;
-  transform: rotate(29deg);
+  bottom: 70%;
+  right: -15%;
+  transform: rotate(28deg);
   width: 65vw;
   height: 50px;
   background-color: #ffd335;

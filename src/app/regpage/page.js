@@ -57,8 +57,6 @@ function Regform() {
 
   return (
     <div className={styles.regformdiv}>
-      <p className={styles.reghead}>Registration Form</p>
-
       <form className={styles.form} onSubmit={handleSubmit}>
         <NameAndBox
           label="Name"
@@ -120,13 +118,15 @@ function Info() {
 
     // Duplicate the content for smooth looping
     const duplicateMarqueeContent = marquee.innerHTML;
-    marquee.innerHTML += duplicateMarqueeContent;
+    marquee.innerHTML += duplicateMarqueeContent; // Duplicate the marquee content
 
-    const totalWidth = marquee.scrollWidth / 2;
+    const totalWidth = marquee.scrollWidth / 2; // Width of the original content
+
+    // Animate the marquee
     gsap.to(marquee, {
-      x: -totalWidth, // Move it to the left by the width of the content
-      duration: 50, // Adjust the speed
-      ease: "none", // Linear motion, no easing
+      x: -totalWidth, // Move it to the right by the width of the content
+      duration: 80, // Adjust the speed (slow down with a higher value)
+      ease: "none", // Linear motion for seamless scrolling
       repeat: -1, // Infinite loop
     });
   }, []);
@@ -141,7 +141,7 @@ function Info() {
     const totalWidth = marquee.scrollWidth / 2;
     gsap.to(marquee, {
       x: -totalWidth, // Move it to the left by the width of the content
-      duration: 50, // Adjust the speed
+      duration: 80, // Adjust the speed
       ease: "none", // Linear motion, no easing
       repeat: -1, // Infinite loop
     });
@@ -150,7 +150,7 @@ function Info() {
   return (
     <div className={styles.infodiv}>
       <div className={styles.infoimg}>
-        <img src="/regph.jpg" alt="Description of the image" />
+        <img src="/regph.png" alt="Description of the image" />
         <div className={styles.marqueecontainer}>
           <div ref={marqueeRef} className={styles.marquee}>
             {/* Marquee content, duplicated inside the useEffect */}

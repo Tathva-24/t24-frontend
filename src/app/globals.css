@@ -7,21 +7,22 @@
   :root {
     --background: #0a0a0a;
     --foreground: #000000;
-    
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-image: url("/Frame%20269%281%29.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   font-family: var(--font-Plus_Jakarta_Sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
