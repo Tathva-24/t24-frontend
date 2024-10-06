@@ -376,7 +376,7 @@
   }
 }
 
-.infoconm {
+ .infoconm {
   width: 100vw;
   height: 20vh;
   background-color: rgb(255, 255, 255);
@@ -385,7 +385,7 @@
   align-items: center;
   flex-direction: row;
 }
-
+/*
 .upper,
 .down {
   height: 30%;
@@ -519,4 +519,4 @@
 .label {
   display: flex;
   flex-direction: row;
-}
+} */
