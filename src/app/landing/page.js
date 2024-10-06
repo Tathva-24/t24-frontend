@@ -73,83 +73,121 @@ export default function Landing() {
   }, []);
 
   const options = useMemo(() => {
-    const screenWidth = window.innerWidth;
-    let numberOfParticles = 180;
-    let particleSize = { min: 1, max: 5 };
-  
-    // Adjust number and size of particles based on screen width
-    if (screenWidth < 400) {
-      numberOfParticles = 50; // Further reduce number for screens < 400px
-      particleSize = { min: 1, max: 3 }; // Smaller dots for very small screens
-    } else if (screenWidth < 700) {
-      numberOfParticles = 100; // Reduce number for screens < 700px
-      particleSize = { min: 1, max: 4 }; // Smaller dots for small screens
-    }
-  
     return {
       background: {
         color: {
-          value: "#", // Adjusted to black background to match your landing page
+          value: "#", // Black background to simulate space
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
+      particles: {
+        number: {
+          value: 200, // Number of continuously moving dots (stars)
+        },
+        color: {
+          value: "#ffffff", // White stars
+        },
+        shape: {
+          type: "circle", // Circular dots for stars
+        },
+        move: {
+          enable: true, // Enable movement
+          direction: "right", // Move stars horizontally to the right
+          speed: 2.5, // Speed of the moving stars
+          straight: true, // Continuous straight movement
+          outMode: "out", // Stars reappear from the left after going off-screen
+        },
+        opacity: {
+          value: 0.8, // Slightly transparent stars
+        },
+        size: {
+          value: { min: 1, max: 3 }, // Random size for the stars
+        },
+      },
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
           onHover: {
             enable: true,
-            mode: "repulse",
+            mode: "grab", // Grab mode on hover
+            parallax: {
+              enable: true,
+              force: 100, // Increase parallax force for a stronger effect
+            },
           },
         },
         modes: {
-          push: {
-            quantity: 2,
-          },
-          repulse: {
-            distance: 100, // Reduced distance for the hover effect
-            duration: 0.4,
+          grab: {
+            distance: 250, // Increase the grab distance
+            line_linked: {
+              opacity: 0.4, // Adjust the opacity of connecting lines
+            },
           },
         },
       },
-      particles: {
-        color: {
-          value: "#ffffff", // White particles to stand out on the black background
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 2,
-        },
-        number: {
-          value: numberOfParticles, // Adjust number based on screen size
-        },
-        size: {
-          value: particleSize, // Adjust size based on screen size
-        },
-      },
-      detectRetina: true,
+      detectRetina: true, // High-quality rendering for Retina screens
     };
   }, []);
+  
+  const randomStarsOptions = useMemo(() => {
+    return {
+      particles: {
+        number: {
+          value: 20, // Initial count is 0, stars will randomly appear
+        },
+        color: {
+          value: ["#FFD700", "#FF6347", "#00CED1", "#FF1493", "#32CD32"], // Array of predefined colors for randomly appearing stars
+        },
+        shape: {
+          type: "star",
+        },
+        move: {
+          enable: true, // Enable movement
+          direction: "right", // Move stars horizontally
+          speed: 2.5, // Faster speed for the randomly appearing stars
+          straight: false, // Move in a straight line
+          outMode: "out", // Stars disappear after moving off-screen
+        },
+        opacity: {
+          value: 1, // Opaque stars
+        },
+        size: {
+          value: { min: 2, max: 4 }, // Slightly larger than the static stars
+        },
+        life: {
+          duration: {
+            sync: true,
+            value: 5, // Random stars live for 5 seconds
+          },
+          count: -1, // Only appear once
+        },
+      },
+      
+      detectRetina: true, // Retina support
+    };
+  }, []);
+  
+  
+  
+  
 
   return (
     <div className={styles.main}>
       {/* Particles.js background */}
       {init && (
-        <Particles
-          id="tsparticles"
-          options={options}
-          style={{ position: "absolute", zIndex: -1 }} // Ensure particles are behind other content
-        />
-      )}
+  <>
+    <Particles
+      id="tsparticles"
+      options={options}
+      style={{ position: "absolute", zIndex: -1 }} // Ensure particles are behind other content
+    />
+    <Particles
+      id="randomStars"
+      options={randomStarsOptions}
+      style={{ position: "absolute", zIndex: -1 }}
+    />
+  </>
+)}
+
 
       {/* Navbar */}
       <Navbar />
