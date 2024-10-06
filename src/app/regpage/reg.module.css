@@ -167,17 +167,35 @@
   font-weight: 500;
   width: 20vw;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .inputbox {
+  
   border-radius: 0.5rem;
   padding-left: 0.2rem;
-  width: 95%;
+  width: 93%;
+  font-size: 1rem;
+  padding: 0.7rem;
   aspect-ratio: 7/1;
   margin-bottom: 4%;
   margin-left: 3%;
   border-color: rgb(0, 36, 78);
-  border-width: 0.1em;
+  border-width: 0.01rem;
+  
+}
+
+.inputbox:hover{
+  border-radius: 0.5rem;
+  padding-left: 0.2rem;
+  width: 95%;
+  font-size: 1rem;
+  padding: 0.7rem;
+  aspect-ratio: 7/1;
+  margin-bottom: 4%;
+  margin-left: 3%;
+  border-color: rgb(0, 36, 78);
+  transition: width 0.3s ease,color 0.3s ease;
 }
 
 .inputbox::placeholder {
@@ -264,7 +282,7 @@
   background-color: #001f54;
   color: white;
   position: relative;
-  width: 75%;
+  width: 85%;
   height: 60%;
   display: flex;
   flex-direction: column;
@@ -274,8 +292,11 @@
 }
 
 .date {
+  position: absolute;
+  top: 3%;
+  left: -4%;
   width: 100%;
-  height: 46%;
+  height: 35%;
   text-align: center;
   margin: 2%;
   font-size: 90%;
@@ -283,8 +304,10 @@
 }
 
 .timeSection {
+  position:absolute;
+  top: 45%;
   height: 47%;
-  width: 70%;
+  width: 60%;
   margin-bottom: 3%;
   display: flex;
   flex-direction: row;
@@ -295,6 +318,7 @@
 .label {
   margin-right: 4%;
   height: 90%;
+
   padding: 4%;
   padding-bottom: 0%;
   background-color: rgb(162, 199, 245);
@@ -310,14 +334,16 @@
   margin-right: 0.3em;
 }
 .time {
-  width: 80%;
-  margin-left: 7%;
-  padding-left: 20%;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 27% 100%);
+  width: 100%;
+  margin-left: 10%;
+  padding-left: 17%;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
 }
 .label {
+  width: 70%;
   display: flex;
   flex-direction: row;
+  margin-right: 5%;
 }
 
 .mobscroll {
