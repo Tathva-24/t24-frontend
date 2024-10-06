@@ -13,9 +13,9 @@ const NameAndBox = ({
   handleChange,
 }) => {
   return (
-    <div className={styles.inputbox_header}>
+    <div>
       <label htmlFor={name}>
-        <div styles={{ width: 200, height: 100 }}> {label}</div>
+        <div className={styles.inputbox_header}> {label}</div>
       </label>
       <input
         type={type}
@@ -56,49 +56,50 @@ function Regform() {
   };
 
   return (
-    <div className={styles.regformdiv}>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <NameAndBox
-          label="Name"
-          type="text"
-          placeholder="Your Name"
-          name="name"
-          value={formData.name}
-          handleChange={handleChange}
-        />
-        <NameAndBox
-          label="College Name"
-          type="text"
-          placeholder="Your College Name"
-          name="college"
-          value={formData.college}
-          handleChange={handleChange}
-        />
-        <NameAndBox
-          label="Email"
-          type="email"
-          placeholder="example@gmail.com"
-          name="email"
-          value={formData.email}
-          handleChange={handleChange}
-        />
-        <NameAndBox
-          label="Contact Number"
-          type="text"
-          placeholder="+91"
-          name="number"
-          value={formData.number}
-          handleChange={handleChange}
-        />
-
-        <div className={styles.scanandreg}>
-          <div className={styles.scantopay}>Scan To Pay</div>
+    <>
+      <form className={styles.regformdiv} onSubmit={handleSubmit}>
+        {/* <div className={styles.regformhead}>Register Here</div> */}
+        <div className={styles.regforma}>
+          <NameAndBox
+            label="Name"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+            value={formData.name}
+            handleChange={handleChange}
+          />
+          <NameAndBox
+            label="College Name"
+            type="text"
+            placeholder="Your College Name"
+            name="college"
+            value={formData.college}
+            handleChange={handleChange}
+          />
+          <NameAndBox
+            label="Email"
+            type="email"
+            placeholder="example@gmail.com"
+            name="email"
+            value={formData.email}
+            handleChange={handleChange}
+          />
+          <NameAndBox
+            label="Contact Number"
+            type="text"
+            placeholder="+91"
+            name="number"
+            value={formData.number}
+            handleChange={handleChange}
+          />
+        </div>
+        <div className={styles.buttonshadow}>
           <button className={styles.regbutton} type="submit">
             Register
           </button>
         </div>
       </form>
-    </div>
+    </>
   );
 }
 
@@ -160,7 +161,6 @@ function Info() {
         <img src="/regph.png" alt="Description of the image" />
         <div className={styles.marqueecontainer}>
           <div ref={marqueeRef} className={styles.marquee}>
-            {/* Marquee content, duplicated inside the useEffect */}
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
@@ -174,9 +174,7 @@ function Info() {
       </div>
 
       <div className={styles.infodiv2}>
-        <div className={styles.infodivchead}>
-          <p>Prompt Engineering</p>
-        </div>
+        <div className={styles.infodivchead}>Prompt Engineering</div>
         <div className={styles.infodivc0}>
           <p>Learn the Language of AI</p>
         </div>
@@ -193,6 +191,7 @@ function Info() {
           </p>
         </div>
       </div>
+
       <div className={styles.infocon}>
         <div className={styles.cont1}>
           <div>
@@ -235,12 +234,12 @@ function Info() {
 
 function Fullpage() {
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.page}>
         <Info />
         <Regform />
       </div>
-    </>
+    </div>
   );
 }
 
