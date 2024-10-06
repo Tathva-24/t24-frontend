@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Landing from "./Landing/page"; // If you want to use Landing later
+import Landing from "../app/Landing/page"
 
 export default function Home() {
   return (
