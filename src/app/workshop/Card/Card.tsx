@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ image, heading, description, price, date })
         <p className={styles.p}>{description}</p>
         <p className={styles.price}>{price}</p>
         <p className={styles.date}>{date}</p>
-        <button className={styles.buyButton}>Buy ﹥</button>
+        <button className={styles.buyButton}>Register ﹥</button>
       </div>
     </div>
   );
