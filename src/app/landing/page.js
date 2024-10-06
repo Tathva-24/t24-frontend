@@ -127,7 +127,7 @@ export default function Landing() {
       detectRetina: true, // High-quality rendering for Retina screens
     };
   }, []);
-  
+
   const randomStarsOptions = useMemo(() => {
     return {
       particles: {
@@ -161,33 +161,28 @@ export default function Landing() {
           count: -1, // Only appear once
         },
       },
-      
+
       detectRetina: true, // Retina support
     };
   }, []);
-  
-  
-  
-  
 
   return (
     <div className={styles.main}>
       {/* Particles.js background */}
       {init && (
-  <>
-    <Particles
-      id="tsparticles"
-      options={options}
-      style={{ position: "absolute", zIndex: -1 }} // Ensure particles are behind other content
-    />
-    <Particles
-      id="randomStars"
-      options={randomStarsOptions}
-      style={{ position: "absolute", zIndex: -1 }}
-    />
-  </>
-)}
-
+        <>
+          <Particles
+            id="tsparticles"
+            options={options}
+            style={{ position: "absolute", zIndex: -1 }} // Ensure particles are behind other content
+          />
+          <Particles
+            id="randomStars"
+            options={randomStarsOptions}
+            style={{ position: "absolute", zIndex: -1 }}
+          />
+        </>
+      )}
 
       {/* Navbar */}
       <Navbar />
@@ -195,9 +190,9 @@ export default function Landing() {
       {/* Landing Page Content */}
       <div className={styles.landing}>
         <div className={styles.item1}>
-        <h1 ref={tathvaTextRef} className={styles.letters}>
-  Tathva&apos;24
-</h1>
+          <h1 ref={tathvaTextRef} className={styles.letters}>
+            Tathva&apos;24
+          </h1>
 
           <h2 ref={comingSoonTextRef} className={styles.letters}>
             Coming-Soon
