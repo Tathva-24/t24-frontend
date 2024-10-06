@@ -1,21 +1,28 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "./reg.module.css";
-import Image from "next/image";
 
 function InfoconMob() {
+  // Create a reference to the bottom of the page
+  const bottomRef = useRef(null);
+
+  // Function to handle scroll
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className={styles.infoconm}>
         <div className={styles.contmain}>
           <div className={styles.upper}>
-            <div className={styles.price}>Price:599/-</div>
+            <div className={styles.price}>Price: 599/-</div>
             <div className={styles.contact}>
               <div>
                 <img
                   className={styles.contactlogo}
                   src="/Vector1.svg"
-                  alt="Description of the image"
+                  alt="Contact Logo"
                 />
               </div>
               <div className={styles.contactinfo}>
@@ -31,14 +38,25 @@ function InfoconMob() {
                 <img
                   src="/Vector.svg"
                   className={styles.labellogo}
-                  alt="Description of the image"
+                  alt="Label Logo"
                 />
               </div>{" "}
-              NIT Calicut<div></div>
+              NIT Calicut
             </div>
           </div>
         </div>
-        <div className={styles.cont2}>Register</div>
+        {/* Add onClick event to the Register button */}
+        <div className={styles.cont2} onClick={scrollToBottom}>
+          Register
+        </div>
+      </div>
+
+      {/* This is the element you scroll to */}
+      <div
+        ref={bottomRef}
+        style={{ height: "0px", backgroundColor: "#f0f0f0" }}
+      >
+        {/* Content at the bottom of the page */}
       </div>
     </>
   );

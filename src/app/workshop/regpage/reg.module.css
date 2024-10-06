@@ -438,12 +438,12 @@
   }
 
   .marqueecontainer {
-    top: 0%;
+    top: 10%;
     left: -25%;
     transform: rotate(-33deg);
   }
   .marqueecontainer1 {
-    bottom: 80%;
+    bottom: 50%;
     right: -25%;
     transform: rotate(33deg);
   }
@@ -771,6 +771,33 @@
     text-align: justify;
     font-size: 1.2rem;
     margin-bottom: 9%;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .marqueecontainer {
+    top: 25%;
+    left: -25%;
+    transform: rotate(-27deg);
+  }
+  .marqueecontainer1 {
+    top: 10%;
+    right: -25%;
+    transform: rotate(27deg);
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .marqueecontainer {
+    top: 20%;
+    left: -25%;
+    transform: rotate(-27deg);
+    width: 100vh;
+  }
+  .marqueecontainer1 {
+    top: 20%;
+    right: -25%;
+    transform: rotate(27deg);
+    width: 100vh;
   }
 }
 
