@@ -5,6 +5,8 @@ import Image from "next/image";
 import gsap from "gsap";
 import Infocont from "./infoconweb";
 import InfoconMob from "./infoconmob";
+
+import { motion } from "framer-motion";
 const NameAndBox = ({
   label,
   type,
@@ -59,7 +61,7 @@ function Regform() {
   return (
     <>
       <form className={styles.regformdiv} onSubmit={handleSubmit}>
-        {/* <div className={styles.regformhead}>Register Here</div> */}
+        <div className={styles.regformhead}>Register Here</div>
         <div className={styles.regforma}>
           <NameAndBox
             label="Name"
@@ -198,17 +200,39 @@ function Info() {
   );
 }
 
-function Fullpage() {
+const Modal = ({ isOpen, onClose }) => {
   return (
-    <div className={styles.main}>
-      <div className={styles.page}>
-        <div className={styles.form}>
-          <Info />
-          <Regform />
+    <motion.div
+      className={styles.modalBackdrop}
+      initial={{ opacity: 0 }} // Initial state
+      animate={{ opacity: 1 }} // Animate to this state
+      exit={{ opacity: 0 }} // Exit state
+      transition={{ duration: 0.3 }} // Transition duration
+    >
+      <motion.div
+        className={styles.modalContent}
+        initial={{ scale: 0 }} // Start scaled down to 0
+        animate={{ scale: 1 }} // Animate to original size
+        exit={{ scale: 0 }} // Exit by scaling down to 0
+        transition={{ duration: 0.3 }} // Transition duration
+      >
+        <button onClick={onClose} className={styles.closeButton}>
+          Close
+        </button>
+        <div className={styles.main}>
+          <div className={styles.page}>
+            <div className={styles.form}>
+              <button className={styles.closeButton} onClick={onClose}>
+                X
+              </button>
+              <Info />
+              <Regform />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
-}
+};
 
-export default Fullpage;
+export default Modal;

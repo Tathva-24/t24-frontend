@@ -1,0 +1,35 @@
+/* app/page.module.css */
+.container {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #000000;
+  letter-spacing: 4vw;
+}
+
+/* Style for the horizontal line below the title */
+.titleLine {
+  width: 50%; /* Line is 50% of the screen width */
+  margin: 0 auto 40px; /* Center the line horizontally, and add spacing below it */
+  border: none; /* Remove default border */
+  height: 2px; /* Line height (thickness) */
+  background-color: #d1dbff; /* Line color */
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+@media only screen and (max-width: 650px) {
+  .title {
+    font-size: 2rem;
+  }
+}
