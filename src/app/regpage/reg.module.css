@@ -6,7 +6,7 @@
   font-weight: 400;
   font-style: normal;
   padding: 0px;
-  margin: 5vw 20vw;
+  margin: 5vh 20vw;
   height: fit-content;
   position: relative;
 }
@@ -47,13 +47,6 @@
   z-index: 1;
 }
 
-.reghead {
-  text-align: center;
-  font-size: 55px;
-  font-weight: 550;
-  margin-bottom: 7vh;
-}
-
 .infodiv2 {
   padding: 20px;
 }
@@ -73,7 +66,7 @@
 
 .infodivchead {
   color: #000000;
-  font-size: 45px;
+  font-size: 2.3rem;
   text-align: justify;
   font-weight: 750;
 }
@@ -90,6 +83,7 @@
   display: flex;
   justify-content: center;
   border-radius: 30px;
+  margin-bottom: 5vh;
 }
 
 .infoimg img {
@@ -126,6 +120,8 @@
   margin-top: 10px;
   font-size: 20px;
   font-weight: 500;
+  width: 20vw;
+  white-space: nowrap;
 }
 
 .inputbox {
@@ -139,12 +135,6 @@
   border-width: 1px;
 }
 
-.scantopay {
-  font-size: 25px;
-  margin-top: 20px;
-  font-weight: 700;
-}
-
 .inputbox::placeholder {
   padding-left: 15px;
   font-size: 19px; /* Adjust this value to reduce the size */
@@ -153,10 +143,10 @@
 
 .marqueecontainer {
   position: absolute;
-  top: -0%;
+  top: 17%;
   left: -15%;
   transform: rotate(-28deg);
-  width: 75vw;
+  width: 65vw;
   height: 50px;
   background-color: #ffd335;
   overflow: hidden;
@@ -168,10 +158,10 @@
 
 .marqueecontainer1 {
   position: absolute;
-  bottom: 70%;
-  right: -15%;
+  bottom: 80%;
+  right: -17%;
   transform: rotate(28deg);
-  width: 65vw;
+  width: 75vw;
   height: 50px;
   background-color: #ffd335;
   overflow: hidden;
@@ -293,13 +283,20 @@
   background-color: rgb(255, 255, 255);
 }
 
+.mobscroll {
+  display: none;
+  align-self: center;
+}
+
 @media only screen and (max-width: 728px) {
   .page {
     flex-direction: column;
+    margin: 0vh 0vw;
+    border-radius: 0;
   }
 
   .infoimg img {
-    width: 60vw;
+    width: 80vw;
     height: auto;
   }
 
@@ -308,11 +305,29 @@
   }
 
   .infodiv {
+    width: 100%;
     border-right: none;
+    border-radius: 0px;
   }
 
+  .marqueecontainer {
+    top: 0%;
+    left: -25%;
+    transform: rotate(-33deg);
+  }
+  .marqueecontainer1 {
+    bottom: 80%;
+    right: -25%;
+    transform: rotate(33deg);
+  }
   .marqueecontainer,
   .marqueecontainer1 {
-    width: 30vw;
+    width: 110vh;
+  }
+  .mobscroll {
+    display: block;
+  }
+  .inputbox {
+    width: 80vw;
   }
 }

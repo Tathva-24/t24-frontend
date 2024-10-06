@@ -147,6 +147,13 @@ function Info() {
     });
   }, []);
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={styles.infodiv}>
       <div className={styles.infoimg}>
@@ -160,7 +167,6 @@ function Info() {
         </div>
         <div className={styles.marqueecontainer1}>
           <div ref={marqueeRef1} className={styles.marquee}>
-            {/* Marquee content, duplicated inside the useEffect */}
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
@@ -219,6 +225,9 @@ function Info() {
           </div>
         </div>
         <div className={styles.cont2}>Price:599/-</div>
+      </div>
+      <div className={styles.mobscroll} onClick={scrollToBottom}>
+        <h2>Register Below</h2>
       </div>
     </div>
   );
