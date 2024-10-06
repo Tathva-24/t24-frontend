@@ -4,18 +4,29 @@
   align-items: center;
   height: 100vh;
 }
-.page {
+.form{
+  border-radius: 2rem;
+  background-color: rgb(255, 255, 255);
+  min-width: 700px;
+  width: 55vw;
+  aspect-ratio: 10/7;
   display: flex;
-  border-radius: 3vh;
+}
+.page {
+  
+  border-radius: 2rem;
+  position: absolute;
+  display: flex;
   justify-content: space-evenly;
   font-weight: 400;
   font-style: normal;
   min-width: 700px;
   width: 55vw;
-  height: 85vh;
+  aspect-ratio: 10/7;
   box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.2), 0 0px 2px rgba(0, 0, 0, 0.1);
 }
 .page::before {
+  
   content: "";
   position: absolute;
   top: -3px;
@@ -24,11 +35,13 @@
   bottom: 0px;
   z-index: -1;
   background: linear-gradient(180deg, #001f54, #ffffff);
-  border-radius: 30px;
+  border-radius: 2rem;
   box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.2), 0 0px 2px rgba(0, 0, 0, 0.1);
 }
 
 .regformdiv {
+  
+  border-radius: 2rem;
   width: 45%;
   padding: 1vw;
   background-color: #ffffff;
@@ -43,6 +56,8 @@
   font-size: 2rem;
 }
 .infodiv {
+  
+  border-radius: 2rem;
   background-color: #ffffff;
   box-sizing: border-box;
   border-top-right-radius: 4vh;
@@ -85,7 +100,7 @@
 
 .infodivchead {
   height: 20%;
-  background-color: rgb(75, 51, 51);
+  background-color: rgb(255, 255, 255);
   color: #000000;
   font-weight: 750;
   white-space: nowrap;
@@ -94,21 +109,23 @@
 }
 
 .infodivc0 {
-  height: 15%;
-  background-color: #a95050;
+  margin-top: 1%;
+  height: 10%;
+  background-color: #ffffff;
   font-weight: 550;
   font-size: 1rem;
 }
 
 .infodivc1 {
-  background-color: #c65151;
+  background-color: #ffffff;
   font-size: 1.5rem;
-  height: 15%;
+  padding-top: 3%;
+  height: 20%;
   font-weight: 700;
 }
 
 .infodivc2 {
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(255, 255, 255);
   height: 55%;
   color: #000000;
   text-align: justify;

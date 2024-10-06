@@ -236,8 +236,10 @@ function Fullpage() {
   return (
     <div className={styles.main}>
       <div className={styles.page}>
+      <div className={styles.form}>
         <Info />
         <Regform />
+        </div>
       </div>
     </div>
   );
