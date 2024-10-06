@@ -13,6 +13,12 @@
   z-index: 1000; /* Ensure it's on top of other content */
 }
 
+.closeButton {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  right: -52vw;
+}
 .form {
   border-radius: 0.8rem;
   background-color: rgb(255, 255, 255);
@@ -20,6 +26,7 @@
   width: 55vw;
   aspect-ratio: 10/7.2;
   display: flex;
+  position: absolute;
 }
 .page {
   border-radius: 0.8rem;
@@ -391,7 +398,7 @@
   .main {
     display: block;
     height: auto;
-    top: -50vh;
+    top: 0vh;
   }
 
   .infocon {
@@ -696,6 +703,31 @@
     padding: 0.5rem;
     color: rgb(205, 193, 193);
   }
+  .modalBackdrop {
+    position: fixed; /* Use fixed positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Use flexbox to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000;
+    height: 100vh;
+  }
+
+  .modalContent {
+    background-color: white; /* Background color for the modal */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    max-width: 500px; /* Maximum width of the modal */
+    width: 100%; /* Make it responsive */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1000;
+    overflow-y: auto;
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -743,6 +775,7 @@
 }
 
 .modalBackdrop {
+  overflow-y: auto;
   position: fixed; /* Use fixed positioning */
   top: 0;
   left: 0;

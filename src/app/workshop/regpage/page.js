@@ -98,7 +98,7 @@ function Regform() {
         </div>
         <div className={styles.buttonshadow}>
           <button className={styles.regbutton} type="submit">
-            Register
+            Pay Now
           </button>
         </div>
       </form>
@@ -216,15 +216,12 @@ const Modal = ({ isOpen, onClose }) => {
         exit={{ scale: 0 }} // Exit by scaling down to 0
         transition={{ duration: 0.3 }} // Transition duration
       >
-        <button onClick={onClose} className={styles.closeButton}>
-          Close
-        </button>
         <div className={styles.main}>
           <div className={styles.page}>
             <div className={styles.form}>
-              <button className={styles.closeButton} onClick={onClose}>
+              {/* <button className={styles.closeButton} onClick={onClose}>
                 X
-              </button>
+              </button> */}
               <Info />
               <Regform />
             </div>
