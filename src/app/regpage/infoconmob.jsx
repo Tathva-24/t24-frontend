@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import styles from "./reg.module.css";
 import Image from "next/image";
 
-function Fullpage() {
+function InfoconMob() {
   return (
     <>
-      <div className={styles.infocon}>
+      <div className={styles.infoconm}>
         <div className={styles.contmain}>
           <div className={styles.upper}>
             <div className={styles.price}>Price:599/-</div>
@@ -44,4 +44,4 @@ function Fullpage() {
   );
 }
 
-export default Fullpage;
+export default InfoconMob;
