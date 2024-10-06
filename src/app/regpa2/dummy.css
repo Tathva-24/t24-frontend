@@ -1,0 +1,122 @@
+.page{
+    width: 100vw;
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.infocon {
+    height: 20%;
+    aspect-ratio: 5/1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+.cont1info {
+    justify-content: center;
+    text-align: center;
+    font-size: 70%;
+  }
+  .cont1,
+  .cont2 {
+    background-color: #001f54;
+    color: white;
+    position: relative;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 75% 0, 100% 50%, 100% 100%, 25% 100%, 0 50%);
+  
+  
+  }
+  
+  .cont1 {
+    transform: translate(1.5rem, 1.6rem);
+  }
+  
+  .cont1logo {
+    margin-right: 3%;
+    margin-top: 1%;
+    width: 60%;
+    height: auto;
+  
+  }
+  
+  .cont2 {
+    font-size: 90%;
+    transform: translate(-1.5rem, -1.6rem);
+  }
+  
+  .contmain {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: #001f54;
+    color: white;
+    position: relative;
+    width: 75%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 80% 0, 100% 50%, 100% 100%, 20% 100%, 0 50%);
+  
+  }
+  
+  
+  .date {
+    width: 100%;
+    height: 46%;
+    text-align: center;
+    margin: 2%;
+    font-size: 90%;
+    white-space: nowrap;
+  }
+  
+  .timeSection {
+    height: 47%;
+    width: 70%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: center;
+  }
+  .time,
+  .label {
+    margin-right: 4%;
+    height: 90%;
+    padding: 4%;
+    padding-bottom: 0%;
+    background-color: rgb(162, 199, 245);
+    color: #000000;
+    font-weight: 550;
+    border-radius:0.3rem;
+    font-size: 65%;
+    white-space: nowrap;
+    margin-top: 2%;
+    
+  }
+  .labellogo {
+    height: 60%;
+    margin-right: 0.3em;
+  }
+  .time {
+    width: 80%;
+    margin-left: 7%;
+    padding-left: 20%;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 27% 100%);
+  }
+  .label {
+    display: flex;
+    flex-direction: row;
+  }

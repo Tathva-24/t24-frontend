@@ -13,9 +13,9 @@ const NameAndBox = ({
   handleChange,
 }) => {
   return (
-    <div className={styles.inputbox_header}>
-      <label htmlFor={name}>
-        <div styles={{ width: 200, height: 100 }}> {label}</div>
+    <div >
+      <label  htmlFor={name}>
+        <div className={styles.inputbox_header}> {label}</div>
       </label>
       <input
         type={type}
@@ -56,8 +56,10 @@ function Regform() {
   };
 
   return (
-    <div className={styles.regformdiv}>
-      <form className={styles.form} onSubmit={handleSubmit}>
+    <>
+      <form className={styles.regformdiv} onSubmit={handleSubmit}>
+      {/* <div className={styles.regformhead}>Register Here</div> */}
+      <div className={styles.regforma}>
         <NameAndBox
           label="Name"
           type="text"
@@ -90,15 +92,15 @@ function Regform() {
           value={formData.number}
           handleChange={handleChange}
         />
-
-        <div className={styles.scanandreg}>
-          <div className={styles.scantopay}>Scan To Pay</div>
+        </div>
+        <div className={styles.buttonshadow}>
           <button className={styles.regbutton} type="submit">
             Register
           </button>
-        </div>
+          </div>
+      
       </form>
-    </div>
+      </>
   );
 }
 
@@ -149,18 +151,16 @@ function Info() {
 
   return (
     <div className={styles.infodiv}>
-      <div className={styles.infoimg}>
+       <div className={styles.infoimg}>
         <img src="/regph.png" alt="Description of the image" />
         <div className={styles.marqueecontainer}>
           <div ref={marqueeRef} className={styles.marquee}>
-            {/* Marquee content, duplicated inside the useEffect */}
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
         </div>
         <div className={styles.marqueecontainer1}>
           <div ref={marqueeRef1} className={styles.marquee}>
-            {/* Marquee content, duplicated inside the useEffect */}
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
@@ -169,7 +169,7 @@ function Info() {
 
       <div className={styles.infodiv2}>
         <div className={styles.infodivchead}>
-          <p>Prompt Engineering</p>
+          Prompt Engineering
         </div>
         <div className={styles.infodivc0}>
           <p>Learn the Language of AI</p>
@@ -187,6 +187,7 @@ function Info() {
           </p>
         </div>
       </div>
+
       <div className={styles.infocon}>
         <div className={styles.cont1}>
           <div>
@@ -219,19 +220,20 @@ function Info() {
           </div>
         </div>
         <div className={styles.cont2}>Price:599/-</div>
-      </div>
+      </div> 
+
     </div>
   );
 }
 
 function Fullpage() {
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.page}>
         <Info />
         <Regform />
       </div>
-    </>
+    </div>
   );
 }
 
