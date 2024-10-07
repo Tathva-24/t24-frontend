@@ -64,7 +64,7 @@
   font-size: 2rem;
 }
 .infodiv {
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   background-color: #ffffff;
   box-sizing: border-box;
   border-top-right-radius: 4vh;
@@ -74,7 +74,7 @@
   display: flex;
   width: 55%;
   flex-direction: column;
-  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.15), 0 0px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 
@@ -536,23 +536,23 @@
 
     font-weight: 700;
     padding: 0%;
-    margin-top: 2%;
+    margin-top: 3%;
   }
 
   .infodivc2 {
     background-color: rgb(255, 255, 255);
     color: #000000;
-    margin-top: 2%;
+    margin-top: 0%;
     text-align: justify;
     font-size: 1.2rem;
-    margin-bottom: 9%;
+    margin-bottom: 5%;
 
     line-height: 1.5;
   }
 
   .infoconm {
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     display: flex;
     background-color: rgb(255, 255, 255);
     align-items: center;
@@ -734,24 +734,7 @@
     font-size: 90%;
     transform: translate(0rem, 0rem);
   }
-  .regbutton {
-    clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
-    background-color: #002552;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 3%;
-    width: 150px;
-    height: 40px;
-    transition: background-color 0.3s;
-    border-radius: 0rem;
-    border-width: 0;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    margin-bottom: 5%;
-  }
-  .regbutton:hover {
-    background-color: #001e88;
-  }
+  
   .buttonshadow {
     justify-content: center;
     align-items: center;
@@ -841,6 +824,25 @@
   
 }
 
+.regbutton {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
+  background-color: #002552;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 3%;
+  width: 150px;
+  aspect-ratio: 3/1;
+  transition: background-color 0.3s;
+  border-radius: 0rem;
+  border-width: 0;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+}
+.regbutton:hover {
+  background-color: #001e88;
+}
+
 .infoimgmob img{
     width: 90%;
     margin-top: 5%;
@@ -911,7 +913,7 @@
     color: #000000;
     font-weight: 750;
     white-space: normal;
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 2.5rem;
   }
 
@@ -923,7 +925,7 @@
     margin-top: 1%;
     background-color: #ffffff;
     font-weight: 550;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 3%;
   }
 
@@ -942,7 +944,7 @@
     margin-top: 2%;
     text-align: justify;
     font-size: 1.2rem;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     margin-right: 4%;
     line-height: 1.5;
   }
@@ -959,8 +961,8 @@
   .cont2 {
     width: 30%;
     height: 40%;
-    background-color: #001f54;
-    color: white;
+    background-color:rgba(238, 239, 251, 1);
+    color: rgb(0, 45, 100);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -968,6 +970,13 @@
     justify-content: center;
     align-items: center;
     clip-path: polygon(0 0, 80% 0, 100% 50%, 100% 100%, 20% 100%, 0 50%);
+    box-shadow: inset 1px 1px 2px rgba(22, 22, 22, 0.5); 
+  }
+
+
+  .cont2:hover {
+    background-color: #001f54;
+    color: white;
   }
 
   .contmain {
@@ -986,7 +995,14 @@
   .closeButton {
     right: -2vw;
   }
+  .regformdiv{
+    padding-top: 10%;
+  }
+  .regformhead{
+    padding-bottom: 2%;
+  }
 }
+
 
 @media only screen and (max-width: 1150px) {
   .marqueecontainer {

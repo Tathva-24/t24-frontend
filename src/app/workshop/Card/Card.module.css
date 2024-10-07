@@ -22,7 +22,7 @@
   max-width: 300px;
   margin-bottom: 0%;
   position: relative; /* Allow absolute positioning of the button */
-  font-family: "Poppins", sans-serif;
+
 
   /* Enhanced shadow */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1),
@@ -88,8 +88,9 @@
   background-color:rgba(238, 239, 251, 1);
   color: rgb(0, 45, 100);
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1em;
+  font-weight: 550;
+  font-family: inherit;
+  font-size: 1.15rem;
   padding: 3%;
   margin-left: 50%;
   width: 45%;
