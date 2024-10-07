@@ -113,7 +113,7 @@
   padding-right: 6%;
   margin-top: 2%;
   width: 100;
-  
+
   background-color: #ffffff;
 }
 
@@ -404,17 +404,16 @@
   flex-direction: row;
 }
 
-@media only screen and (max-width: 1406px){
-
-  .infodivc2{
+@media only screen and (max-width: 1406px) {
+  .infodivc2 {
     margin-top: -2%;
   }
 
-  .infodivc0{
+  .infodivc0 {
     margin-top: -1%;
   }
 
-  .infocon{
+  .infocon {
     margin-top: -2%;
   }
 }
@@ -962,7 +961,6 @@
   }
 }
 
-
 @media only screen and (max-width: 1150px) {
   .marqueecontainer {
     top: 25%;
@@ -983,13 +981,13 @@
 
 @media only screen and (max-width: 870px) {
   .marqueecontainer {
-    top: 20%;
+    top: -30%;
     left: -25%;
     transform: rotate(-27deg);
     width: 100vh;
   }
   .marqueecontainer1 {
-    top: 20%;
+    top: -30%;
     right: -25%;
     transform: rotate(27deg);
     width: 100vh;
