@@ -61,7 +61,7 @@ function Regform() {
   return (
     <>
       <form className={styles.regformdiv} onSubmit={handleSubmit}>
-        <div className={styles.regformhead}>Register Here</div>
+        <div className={styles.regformhead}>Register Here.</div>
         <div className={styles.regforma}>
           <NameAndBox
             label="Name"
@@ -96,10 +96,12 @@ function Regform() {
             handleChange={handleChange}
           />
         </div>
+        <div  className={styles.paydiv}>
         <div className={styles.buttonshadow}>
           <button className={styles.regbutton} type="submit">
             Pay Now
           </button>
+        </div>
         </div>
       </form>
     </>

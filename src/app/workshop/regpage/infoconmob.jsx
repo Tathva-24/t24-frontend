@@ -41,7 +41,7 @@ function InfoconMob() {
                   alt="Label Logo"
                 />
               </div>{" "}
-              NIT Calicut
+              NITC
             </div>
           </div>
         </div>

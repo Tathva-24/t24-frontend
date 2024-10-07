@@ -30,7 +30,7 @@ const Infocont = () => {
                 alt="Description of the image"
               />
             </div>
-            NIT Calicut
+            NITC
           </div>
         </div>
       </div>
