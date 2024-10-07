@@ -1,11 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Landing from '../app/Landing/page'
-
+import Landing from './Landing'
+import { HeroHighlight } from './Landing/hero-highlight'
 export default function Home() {
   return (
     <>
-      <Landing />
+      <HeroHighlight>
+        <Landing />
+      </HeroHighlight>
     </>
   );
 }
