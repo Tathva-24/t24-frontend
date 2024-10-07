@@ -130,7 +130,7 @@
   font-size: 1rem;
 }
 
-.infoimgmob{
+.infoimgmob {
   display: none;
 }
 
@@ -491,7 +491,7 @@
     transform: rotate(-33deg);
   }
   .marqueecontainer1 {
-    bottom: 10%;
+    bottom: 20%;
     right: -25%;
     transform: rotate(33deg);
   }
@@ -801,59 +801,37 @@
     height: 100%;
     position: fixed;
   }
-
-
+  .marqueecontainer {
+    top: 100px;
+  }
 }
 
 @media only screen and (max-width: 490px) {
+  .infoimgmob {
+    background-color: #ffffff;
+    height: 41%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 1em;
+    margin-top: 3%;
+    height: auto;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 1em;
+    align-self: center;
+  }
 
-  
-.infoimgmob{
-  background-color: #ffffff;
-  height: 41%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  border-radius: 1em;
-  margin-top: 3%;
-  height: auto;
-  width: 80%;
-  background-color: #ffffff;
-  border-radius: 1em;
-  align-self: center;
-  
-}
-
-.regbutton {
-  clip-path: polygon(0 0, 85% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
-  background-color: #002552;
-  color: white;
-  cursor: pointer;
-  font-size: 1em;
-  padding: 3%;
-  width: 150px;
-  aspect-ratio: 3/1;
-  transition: background-color 0.3s;
-  border-radius: 0rem;
-  border-width: 0;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
-
-}
-.regbutton:hover {
-  background-color: #001e88;
-}
-
-.infoimgmob img{
+  .infoimgmob img {
     width: 90%;
     margin-top: 5%;
     z-index: 10;
     position: relative;
-  
-}
+  }
 
-.infoimg{
-  display: none;
-}
+  .infoimg {
+    display: none;
+  }
   .time,
   .label {
     height: 100%;
@@ -1019,21 +997,6 @@
     top: 10%;
     right: -25%;
     transform: rotate(27deg);
-  }
-}
-
-@media only screen and (max-width: 870px) {
-  .marqueecontainer {
-    top: -30%;
-    left: -25%;
-    transform: rotate(-27deg);
-    width: 100vh;
-  }
-  .marqueecontainer1 {
-    top: -30%;
-    right: -25%;
-    transform: rotate(27deg);
-    width: 100vh;
   }
 }
 

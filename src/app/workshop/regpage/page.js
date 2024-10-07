@@ -118,6 +118,8 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, CSSRulePlugin, Draggable);
 function Info() {
   const marqueeRef = useRef(null);
   const marqueeRef1 = useRef(null);
+  const marqueeRefm = useRef(null);
+  const marqueeRef1m = useRef(null);
 
   useEffect(() => {
     const marquee = marqueeRef1.current;
@@ -153,12 +155,39 @@ function Info() {
     });
   }, []);
 
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
+  useEffect(() => {
+    const marqueem = marqueeRef1m.current;
+
+    // Duplicate the content for smooth looping
+    const duplicateMarqueemContent = marqueem.innerHTML;
+    marqueem.innerHTML += duplicateMarqueemContent; // Duplicate the marqueem content
+
+    const totalWidth = marqueem.scrollWidth / 2; // Width of the original content
+
+    // Animate the marqueem
+    gsap.to(marqueem, {
+      x: -totalWidth, // Move it to the right by the width of the content
+      duration: 80, // Adjust the speed (slow down with a higher value)
+      ease: "none", // Linear motion for seamless scrolling
+      repeat: -1, // Infinite loop
     });
-  };
+  }, []);
+
+  useEffect(() => {
+    const marqueem = marqueeRefm.current;
+
+    // Duplicate the content for smooth looping
+    const duplicateMarqueemContent = marqueem.innerHTML;
+    marqueem.innerHTML += duplicateMarqueemContent;
+
+    const totalWidth = marqueem.scrollWidth / 2;
+    gsap.to(marqueem, {
+      x: -totalWidth, // Move it to the left by the width of the content
+      duration: 80, // Adjust the speed
+      ease: "none", // Linear motion, no easing
+      repeat: -1, // Infinite loop
+    });
+  }, []);
 
   return (
     <div className={styles.infodiv}>
@@ -170,7 +199,7 @@ function Info() {
             LOOK{" "}
           </div>
         </div>
-        
+
         <div className={styles.marqueecontainer1}>
           <div ref={marqueeRef1} className={styles.marquee}>
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
@@ -182,14 +211,14 @@ function Info() {
       <div className={styles.infoimgmob}>
         <img src="/b2.svg" alt="Description of the image" />
         <div className={styles.marqueecontainer}>
-          <div  className={styles.marquee}>
+          <div ref={marqueeRefm} className={styles.marquee}>
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
         </div>
-        
+
         <div className={styles.marqueecontainer1}>
-          <div  className={styles.marquee}>
+          <div ref={marqueeRef1m} className={styles.marquee}>
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
