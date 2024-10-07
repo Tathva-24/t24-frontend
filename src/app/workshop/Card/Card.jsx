@@ -38,9 +38,9 @@ const Card = ({ image, heading, description, price, date }) => {
           <p className={styles.p}>{description}</p>
           <p className={styles.price}>{price}</p>
           <p className={styles.date}>{date}</p>
-          <button className={styles.buyButton} onClick={handleRegisterClick}>
-            Register ﹥
-          </button>
+          <button className={styles.regbutton} onClick={handleRegisterClick}>
+              Register
+            </button>
         </div>
         {/* Render the Modal component only if it is open */}
       </div>

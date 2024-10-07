@@ -163,7 +163,7 @@ function Info() {
   return (
     <div className={styles.infodiv}>
       <div className={styles.infoimg}>
-        <img src="/regph.png" alt="Description of the image" />
+        <img src="/x2.svg" alt="Description of the image" />
         <div className={styles.marqueecontainer}>
           <div ref={marqueeRef} className={styles.marquee}>
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
