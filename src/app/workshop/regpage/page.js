@@ -177,7 +177,7 @@ function Info() {
       </div>
 
       <div className={styles.infodiv2}>
-        <div className={styles.infodivchead}>Prompt Engineering</div>
+        <div className={styles.infodivchead}><p>Prompt Engineering</p></div>
         <div className={styles.infodivc0}>
           <p>Learn the Language of AI</p>
         </div>

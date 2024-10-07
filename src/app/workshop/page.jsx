@@ -25,6 +25,47 @@ const workshops = [
     heading: "Real Madrid VS BVB",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    price: "₹1200",
+    date: "1, June 2024",
+  },
+  {
+    image: "/poster.png",
+    heading: "Real Madrid VS BVB",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    price: "₹1200",
+    date: "1, June 2024",
+  },
+  {
+    image: "/poster.png",
+    heading: "Real Madrid VS BVB",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    price: "₹1200",
+    date: "1, June 2024",
+  },
+  {
+    image: "/poster.png",
+    heading: "Real Madrid VS BVB",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    price: "₹1200",
+    date: "1, June 2024",
+  },
+  {
+    image: "/poster.png",
+    heading: "Real Madrid VS BVB",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    price: "₹1200",
+    date: "1, June 2024",
+  },
+  
+  {
+    image: "/poster.png",
+    heading: "Real Madrid VS BVB",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     price: "₹1500",
     date: "1, June 2024",
   },
@@ -35,7 +76,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1 className={styles.title}>WORKSHOPS</h1>
       {/* Horizontal line below the title */}
-      <hr className={styles.titleLine} />
+      {/* <hr className={styles.titleLine} /> */}
 
       <div className={styles.cardContainer}>
         {workshops.map((workshop, index) => (

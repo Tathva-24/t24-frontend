@@ -5,11 +5,13 @@
 
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
   color: #000000;
   letter-spacing: 4vw;
+  margin-left: 4vw;
+  margin-top: 2vh;
 }
 
 /* Style for the horizontal line below the title */

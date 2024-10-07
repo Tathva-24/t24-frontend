@@ -748,11 +748,16 @@
     font-size: 2.7rem;
   }
 
+  .infodivchead p{
+    z-index: 20000;
+  }
+
   .infodivc0 {
     margin-top: 1%;
     background-color: #ffffff;
     font-weight: 550;
     font-size: 1.4rem;
+    margin-bottom: 3%;
   }
 
   .infodivc1 {
@@ -819,6 +824,12 @@
     top: 25%;
     left: -25%;
     transform: rotate(-27deg);
+  }
+
+  
+  .infodivchead p{
+    position: relative;
+    z-index: 20;
   }
   .marqueecontainer1 {
     top: 10%;
