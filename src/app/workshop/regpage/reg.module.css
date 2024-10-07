@@ -905,6 +905,10 @@
 
 @media only screen and (max-width: 490px) {
 
+  .main{
+    overflow: hidden;
+  }
+
   .marqueecontainer {
     position: absolute;
     top: -17%;
