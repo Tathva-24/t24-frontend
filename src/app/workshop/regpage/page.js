@@ -170,8 +170,26 @@ function Info() {
             LOOK{" "}
           </div>
         </div>
+        
         <div className={styles.marqueecontainer1}>
           <div ref={marqueeRef1} className={styles.marquee}>
+            HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
+            LOOK{" "}
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.infoimgmob}>
+        <img src="/b2.svg" alt="Description of the image" />
+        <div className={styles.marqueecontainer}>
+          <div  className={styles.marquee}>
+            HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
+            LOOK{" "}
+          </div>
+        </div>
+        
+        <div className={styles.marqueecontainer1}>
+          <div  className={styles.marquee}>
             HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY LOOK HEY
             LOOK{" "}
           </div>
