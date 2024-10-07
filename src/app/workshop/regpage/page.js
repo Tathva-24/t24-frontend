@@ -223,7 +223,7 @@ function Info() {
             LOOK{" "}
           </div>
         </div>
-      </div>
+      </div> 
 
       <div className={styles.infodiv2}>
         <div className={styles.infodivchead}>
@@ -244,9 +244,9 @@ function Info() {
             requirements to create efficient forms.
           </p>
         </div>
-      </div>
-      <Infocont />
-      <InfoconMob />
+      </div> 
+       <Infocont /> 
+       <InfoconMob /> 
     </div>
   );
 }
