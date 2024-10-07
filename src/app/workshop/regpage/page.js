@@ -61,7 +61,7 @@ function Regform() {
   return (
     <>
       <form className={styles.regformdiv} onSubmit={handleSubmit}>
-        <div className={styles.regformhead}>Register Here.</div>
+        <div className={styles.regformhead}>Register here</div>
         <div className={styles.regforma}>
           <NameAndBox
             label="Name"
