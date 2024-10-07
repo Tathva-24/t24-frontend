@@ -96,12 +96,12 @@ function Regform() {
             handleChange={handleChange}
           />
         </div>
-        <div  className={styles.paydiv}>
-        <div className={styles.buttonshadow}>
-          <button className={styles.regbutton} type="submit">
-            Pay Now
-          </button>
-        </div>
+        <div className={styles.paydiv}>
+          <div className={styles.buttonshadow}>
+            <button className={styles.regbutton} type="submit">
+              Pay Now
+            </button>
+          </div>
         </div>
       </form>
     </>
@@ -197,7 +197,9 @@ function Info() {
       </div>
 
       <div className={styles.infodiv2}>
-        <div className={styles.infodivchead}><p>Prompt Engineering</p></div>
+        <div className={styles.infodivchead}>
+          <p>Prompt Engineering</p>
+        </div>
         <div className={styles.infodivc0}>
           <p>Learn the Language of AI</p>
         </div>
@@ -238,10 +240,10 @@ const Modal = ({ isOpen, onClose }) => {
       >
         <div className={styles.main}>
           <div className={styles.page}>
+            <button className={styles.closeButton} onClick={onClose}>
+              X
+            </button>
             <div className={styles.form}>
-              {/* <button className={styles.closeButton} onClick={onClose}>
-                X
-              </button> */}
               <Info />
               <Regform />
             </div>
