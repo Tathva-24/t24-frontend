@@ -60,7 +60,7 @@ const workshops = [
     price: "₹1200",
     date: "1, June 2024",
   },
-  
+
   {
     image: "/poster.png",
     heading: "Real Madrid VS BVB",

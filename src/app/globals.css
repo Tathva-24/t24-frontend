@@ -16,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  font-family: var(--font-Plus_Jakarta_Sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

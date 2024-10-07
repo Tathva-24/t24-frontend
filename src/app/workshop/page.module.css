@@ -1,5 +1,6 @@
 /* app/page.module.css */
 .container {
+  font-family: var(--font-Plus_Jakarta_Sans);
   padding: 20px;
   /* filter: blur(5px); */
 }
