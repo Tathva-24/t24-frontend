@@ -55,9 +55,7 @@ function InfoconMob() {
       <div
         ref={bottomRef}
         style={{ height: "0px", backgroundColor: "#f0f0f0" }}
-      >
-        {/* Content at the bottom of the page */}
-      </div>
+      ></div>
     </>
   );
 }
